@@ -25,6 +25,7 @@ section {
 .botonGet, .botonGetmenu {
     color: white;
     background-color:#F3613C;
+    cursor:pointer;
 }
 
 .botonGet:hover {
@@ -51,6 +52,7 @@ section {
     border-radius: 50px;
     border-style: none;
     box-shadow: 0px 4px 8px 0px black;
+    cursor:pointer;
 }
 
 .list, .position, ol {
@@ -225,6 +227,10 @@ h1 {
     border-style: none;
 }
 
+.botonGo {
+    cursor:pointer;
+}
+
 /* ESTILOS_SECCIÓN 3 */
 
 .contenedor4 {
@@ -282,6 +288,7 @@ h1 {
 #titulo {
     color: white;
     font-size: 2.5em;
+    width: 40%;
 }
 
 .boton2 {
@@ -298,8 +305,8 @@ h1 {
     color: rgba(206, 78, 78, 0.25);
 }
 
+/*FOOTER*/
 
-/* ESTILOS_FOOTER */
 footer {
     background-color: #1E1E26;
     font-size: 1em;
@@ -309,10 +316,14 @@ footer {
     justify-content: space-around;
     flex-wrap: wrap;
     padding-top: 3%;
-    position: relative;
 }
 
-#estiloForm {
+#ubicacionIconos, #ubicacionRights {
+    margin-top: 30px;
+    cursor:pointer;
+}
+
+.estiloForm {
     width: 201px;
     height: 44px;
     border-radius: 50px;
@@ -322,10 +333,15 @@ footer {
 
 .position {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     align-content: flex-start;
     text-decoration: none;
+} 
+
+#ubicacionRights {
+    font-size: 0.8em;
+    color: #8C8C94;
+    right: 7%;
 }
 
 .active {
@@ -370,17 +386,6 @@ i:hover {
     transform:scale(1.25);
 }
 
-#ubicacionIconos, #ubicacionRights {
-    position: absolute;
-    bottom: 10%;
-}
-
-#ubicacionRights {
-    font-size: 0.8em;
-    color: #8C8C94;
-    right: 7%;
-}
-
 /* Diseño responsive */
 
 /* Para dispositivos smartphone pequeños */
@@ -404,9 +409,11 @@ i:hover {
     }
 
     footer {
-        height: 40vh;
+        display:flex;
+        flex-flow: column-reverse wrap;
+        text-align: center;
     }
-    
+
     .section4 {
         flex-wrap:wrap;
         justify-content: center;
@@ -427,6 +434,11 @@ i:hover {
         display: none;  
     }
 
+    #titulo {
+        color: white;
+        font-size: 1.5em;
+    }
+
     .subcontenedor {
         width: auto;
     }
@@ -439,17 +451,48 @@ i:hover {
         width: auto;
         padding-top: 10%;
     }
-
-
 }
 
-
 /* Para smartphone grandes y tablets */
-/*
+
 @media (min-width:481px) and (max-width:1023px) {
+    
+    #menu {
+        display:inline-flex;
+        padding-right: 10%;
+    }
+
+    .botonGetmenu {
+        display: none;  
+    }
+
+    #list1 {
+        position:fixed;
+        top:-100vh;
+        flex-direction: column;
+    }
+
+    #titulo {
+        color: white;
+        font-size: 2em;
+    }
+    
     .contenedor4 {
         display: flex;
         flex-wrap: wrap;
     }
+
+    .contenedor2, footer > a {
+        flex-flow:column-reverse wrap;
+        align-items: center;
+        text-align: center;
+        width: auto;
+    }
+
+    footer {
+        display:flex;
+        flex-flow: column-reverse wrap;
+        text-align: center;
+    }
+
 }
-*/
